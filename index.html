@@ -1,13 +1,64 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-project</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalisa Shop</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-pink-50">
+
+    <header class="bg-pink-500 text-white p-5 text-center">
+        <h1 class="text-3xl font-bold">Chalisa Shop</h1>
+        <p>ร้านขายสินค้าออนไลน์</p>
+    </header>
+
+    <div class="max-w-5xl mx-auto p-5">
+
+        <h2 class="text-2xl font-bold text-pink-600 mb-4">
+            สินค้าของเรา
+        </h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="ค้นหาสินค้า..."
+            class="w-full p-3 border rounded-lg mb-5"
+        >
+
+        <div id="productList"
+            class="grid grid-cols-2 md:grid-cols-3 gap-5">
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow mt-8">
+            <h2 class="text-xl font-bold text-pink-600 mb-3">
+                🛒 ตะกร้าสินค้า
+            </h2>
+
+            <div id="cartList">
+                ยังไม่มีสินค้า
+            </div>
+
+            <p class="text-lg font-bold mt-4">
+                ราคารวม: <span id="total">0</span> บาท
+            </p>
+
+            <button onclick="checkout()"
+                class="bg-pink-500 text-white px-5 py-2 rounded-lg mt-3">
+                สั่งซื้อสินค้า
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
